@@ -1,0 +1,4 @@
+this file is used to save fstream operations: 
+hello iostream
+ios::app mode will locate to the end of file.
+ios::app mode will locate to the end of file.
