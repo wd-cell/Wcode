@@ -1,0 +1,13 @@
+#目标文件main依赖于say_hello.o  say_goodbey.o
+main:main.o  say_hello.o  say_goodbey.o
+	gcc  -o main main.o  say_hello.o  say_goodbey.o 
+main.o:main.c
+	gcc  -c  main.c
+say_hello.o:say_hello.c
+	gcc  -c  say_hello.c
+say_goodbey.o:say_goodbey.c
+	gcc  -c  say_goodbey.c
+clean:
+	rm  -rf  *.o
+	rm  -rf  a.out
+
