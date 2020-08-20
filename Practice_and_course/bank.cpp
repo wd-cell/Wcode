@@ -3,10 +3,10 @@
 #include<iostream>
 using namespace std;
 
-//namespace {
+namespace { //匿名空间，不暴露给其它编译单元，仅在本文件使用
 	const int DAYS_BEFOR_MONTH[] = { 0,31,59,90,120,151,181,212,243,273,304,334,365 };
-//}
-
+}
+	
 //date.cpp
 Date::Date(int year, int month, int day) :year(year), month(month), day(day) {
 	if (day <= 0 || day > getMaxDay()) {
@@ -70,7 +70,7 @@ void SavingsAccount::withdraw(const Date& date, double amount, const string& des
 void SavingsAccount::settle(const Date& date) {
 	if (date.getMonth() == 1) {
 		double interest = acc.getSum(date)*rate / (date - Date(date.getYear() - 1, 1, 1));
-		if (interest == 0)
+		if (interest != 0)
 			record(date, interest, "interest");
 		acc.reset(date, getBalance());
 	}

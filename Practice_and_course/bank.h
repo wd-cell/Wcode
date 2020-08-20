@@ -59,7 +59,7 @@ private:
 	static double total; //所有账户的总金额
 
 protected:
-	Account(const Date& date, const string& id); //供派生类调用的构造函数
+	Account(const Date& date, const string& id); //供派生类调用的构造函数。不允许派生类以外的代码构造Account对象
 	void record(const Date& date, double amount, const string& desc); //记录一笔账，amount为金额，desc为说明
 	void error(const string& msg) const;
 
@@ -70,7 +70,7 @@ public:
 	virtual void deposit(const Date& date, double amount, const string& desc) = 0; //存入现金
 	virtual void withdraw(const Date& date, double amount, const string& desc) = 0; //取出现金
 	virtual void settle(const Date& date) = 0; //结算（计算利息、年费等），每月结算一次，date为结算日期
-	virtual void show() const;
+	virtual void show() const; //显示余额
 };
 
 class SavingsAccount :public Account { //储蓄账户类
@@ -113,3 +113,5 @@ public:
 	void settle(const Date& date); //结算利息和年费，每年1月1日调用一次
 	void show() const;
 };
+
+void testBankAccount(); //测试

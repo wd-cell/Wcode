@@ -292,7 +292,6 @@ void testIOstream() {
 
 
 #include"bank.h"
-void testBankAccount(); //银行账户实例
 int main() {
-	testIOstream();
+	testBankAccount();
 }
