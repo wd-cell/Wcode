@@ -22,7 +22,7 @@
 
 # 编译命令
 - Linux/Mac: g++ 2048.cpp -l ncurses -o 2048
-- Windows: g++ 2048.cpp C:\pdcurs36\wincon\pdcurses.a -I C:\pdcurs36\ -o 2048
+- Windows: g++ 2048.cpp C:\pdcurs36\wincon\pdcurses.a -I C:\pdcurs36\ -o 2048      //clang++未编译成功
 
 # 开发步骤
 1. [引入curses库](https://git.nowcoder.com/68/2048/blob/f40b7e8cb33b6d5ba9159b51ef3f1c2bd7b8c8a7/2048.cpp)

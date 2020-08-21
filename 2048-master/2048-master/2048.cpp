@@ -3,7 +3,7 @@
 #include <cstdlib>
 #include <cstdio>
 #include <ctime>
-#include <curses.h>
+#include "curses.h"
 using namespace std;
 
 // 格子数
